@@ -1,0 +1,26 @@
+{
+    "name": "Web Share Target API Sandbox Page",
+    "short_name": "WSTASP",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "icons": [
+        {
+            "src": "./img/144x144.png",
+            "sizes": "144x144",
+            "type": "image/png"
+        },
+        {
+            "src": "./img/512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "start_url": "http://127.0.0.1:5500/index.html",
+    "share_target": {
+        "action": "/",
+        "method": "GET",
+        "params": {
+            "text": "text"
+        }
+    }
+  }

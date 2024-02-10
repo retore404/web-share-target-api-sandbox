@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Web Share Target API Sandbox</title>
+        <link rel="manifest" href="manifest.json">
+        <script>
+            function onLoadHandler() {
+                // パラメタ取得
+                const params = location.search;
+                document.getElementById("inputText").value = getParam("text");
+            }
+
+            /**
+             * Get the URL parameter value
+             *
+             * @param  name {string} パラメータのキー文字列
+             * @return  url {url} 対象のURL文字列（任意）
+             */
+            function getParam(name, url) {
+                if (!url) url = window.location.href;
+                name = name.replace(/[\[\]]/g, "\\$&");
+                var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+                    results = regex.exec(url);
+                if (!results) return null;
+                if (!results[2]) return '';
+                return decodeURIComponent(results[2].replace(/\+/g, " "));
+            }
+
+            window.addEventListener('load', function() {
+              if ('serviceWorker' in navigator) {
+                navigator.serviceWorker.register('/sw.js');
+              }
+            });
+        </script>
+    </head>
+    <body onload="onLoadHandler()">
+        <input id="inputText" type="text" />
+    </body>
+</html>
