@@ -15,9 +15,9 @@
             "type": "image/png"
         }
     ],
-    "start_url": "https://retore404.github.io/web-share-target-api-sandbox/index.html",
+    "start_url": "https://retore404.github.io/web-share-target-api-sandbox/",
     "share_target": {
-        "action": "/index.html",
+        "action": "/",
         "method": "GET",
         "params": {
             "text": "text"
