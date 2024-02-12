@@ -17,7 +17,7 @@
     ],
     "start_url": "https://retore404.github.io/web-share-target-api-sandbox/",
     "share_target": {
-        "action": "/",
+        "action": "/web-share-target-api-sandbox/",
         "method": "GET",
         "params": {
             "text": "text"
